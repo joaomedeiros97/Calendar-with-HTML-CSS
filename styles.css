@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+.container {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 260px;
+    height: 276px;
+    border: 2px solid black;
+    border-top: 0;
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+}
+
+.header input {
+    border-top: 2px solid black;
+    width: 100%;
+    padding: 8px;
+    margin-left: -1px;
+}
+
+.header input::placeholder {
+    text-align: center;
+}
+
+.header button {
+    border: 2px solid black;
+    border-right: 0;
+    padding: 10px 10px 10px 20px;
+    margin-left: -10px;
+    cursor: pointer;
+}
+
+.header button:hover i {
+    color: rgb(60, 60, 60);
+}
+
+.header i {
+    font-size: 1.5rem;
+    padding-right: 10px;
+}
+
+.calendar-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 20px;
+}
+
+.days-of-the-week {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 10px;
+    width: 100%;
+}
+
+.days-of-the-week::after {
+    content: '';
+    position: absolute;
+    border-bottom: 2px solid black;
+    margin: 0 -10px;
+    bottom: 152px;
+    width: 100%;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 31px);
+    grid-template-rows: repeat(5, 14.28px);
+    gap: 18px 5px;
+    position: relative;
+}
+
+.days span {
+    margin-left: 7px;
+}
+
+.line span {
+    margin-left: 8px;
+}
+
+.row span {
+    margin-left: 8px;
+}
+
+.line {
+    border-right: 1px solid gray;
+    top: 10px;
+    height: 158px;
+    width: 40px;
+}
+
+.row {
+    border-bottom: 1px solid gray;
+    height: 27px;
+    width: 292px;
+}
+
+
